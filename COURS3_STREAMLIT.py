@@ -26,7 +26,7 @@ authenticator = Authenticate(
 )
 authenticator.login()
 def accueil():
-      st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
+      st.title("Bienvenue sur le contenu réservé aux utilisateurs connectés")
 
 
 if st.session_state["authentication_status"]:
