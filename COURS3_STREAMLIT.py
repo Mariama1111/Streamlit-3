@@ -1,8 +1,7 @@
 import streamlit as st
 from streamlit_authenticator import Authenticate
-import streamlit as st
+import streamlit_authenticator as stauth
 from streamlit_option_menu import option_menu
-
 
 # Nos données utilisateurs doivent respecter ce format
 
@@ -25,7 +24,7 @@ authenticator = Authenticate(
     "cookie key", # La clé du cookie, un str quelconque
     0, # Le nombre de jours avant que le cookie expire 
 )
-
+authenticator.login()
 def accueil():
       st.title("Bienvenu sur le contenu réservé aux utilisateurs connectés")
 
@@ -39,7 +38,6 @@ elif st.session_state["authentication_status"] is False:
     st.error("L'username ou le password est/sont incorrect")
 elif st.session_state["authentication_status"] is None:
     st.warning('Les champs username et mot de passe doivent être remplie')
-
 
 
 # Création du menu qui va afficher les choix qui se trouvent dans la variable options
