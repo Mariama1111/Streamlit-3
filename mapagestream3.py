@@ -45,20 +45,20 @@ if 'authentication_status' in st.session_state:
         # On indique au programme quoi faire en fonction du choix
         if selection == "🏠 Accueil":
             accueil()
-            st.image("Boomie/artifices.jpg", width=1000)
+            st.image("artifices.jpg", width=1000)
 
         elif selection == "🐶 Mon chien":
             st.title("Bienvenue sur l'album de Boomie !")
 
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.image("Boomie/20230601_171202.png", caption="Mimi !")
+                st.image("20230601_171202.png", caption="Mimi !")
 
             with col2:
-                st.image("Boomie/20230728_175006.jpg", caption="Je me cache, avec mon copain !")
+                st.image("20230728_175006.jpg", caption="Je me cache, avec mon copain !")
 
             with col3:
-                st.image("Boomie/IMG-20230709-WA0000.jpg", caption="Salut les copains !")
+                st.image("IMG-20230709-WA0000.jpg", caption="Salut les copains !")
 
 elif st.session_state["authentication_status"] is False:
     st.error("L'username ou le password est/sont incorrect")
